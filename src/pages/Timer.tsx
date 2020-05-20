@@ -33,11 +33,12 @@ const Timer: React.FC = () => {
       <AnimatedCircularProgress
         size={300}
         width={12}
+        rotation={0}
         fill={(secondsEllapsed * 100) /  600}
         tintColor="#00E0FF"
         backgroundColor="#FFF">
         { () => ( 
-          <Text style={styles.title}>{formatSeconds(secondsEllapsed)}</Text>
+          <Text style={styles.progress}>{formatSeconds(secondsEllapsed)}</Text>
         )}
         </AnimatedCircularProgress>
 
@@ -62,8 +63,8 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     textAlign: 'center',
-    maxWidth: 280,
-    marginVertical: 80,
+    maxWidth: 300,
+    marginBottom: 80,
   },
 
   button: {
@@ -72,7 +73,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#2E5B9A',
     borderRadius: 36,
     alignItems: 'center',
-    justifyContent: 'center'
-  }
-
+    justifyContent: 'center',
+    marginTop: 80,
+  },
+  
+  progress: {
+    color: '#1C354F',
+    fontSize: 60,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
 })
