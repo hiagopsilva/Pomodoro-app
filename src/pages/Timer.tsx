@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -13,14 +13,24 @@ function formatSeconds(seconds) {
 }
 
 const Timer: React.FC = () => {
+  const timerRef = useRef();
+
+  const [timerEnabled, setTimerEnabled] = useState(false);
   const [secondsEllapsed, setSecondsEllapsed] = useState(0);
   
-  function startTimer() {
-    
-    setInterval(() => {
-      setSecondsEllapsed(state => state + 1);
-    }, 1000);
-    
+  function toggleTimer() {
+    if (timerEnabled) {
+      clearInterval(timerRef.current);
+
+      setTimerEnabled(false);
+    } else {
+      timerRef.current = setInterval(() => {
+        setSecondsEllapsed(state => state + 1);
+      }, 1000);
+
+      setTimerEnabled(true);
+    }
+
   }
 
   return (
@@ -42,8 +52,8 @@ const Timer: React.FC = () => {
         )}
         </AnimatedCircularProgress>
 
-      <TouchableOpacity style={styles.button} onPress={startTimer}>
-        <MaterialIcons name="play-arrow" size={32} color="#FFF" />
+      <TouchableOpacity style={styles.button} onPress={toggleTimer}>
+        <MaterialIcons name={timerEnabled ? 'pause' : 'play-arrow'} size={32} color="#FFF" />
       </TouchableOpacity>
     </LinearGradient>
   );
