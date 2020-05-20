@@ -30,7 +30,16 @@ const Timer: React.FC = () => {
     >
       <Text style={styles.title}>Pomodora</Text>
 
-      <Text style={styles.title}>{formatSeconds(secondsEllapsed)}</Text>
+      <AnimatedCircularProgress
+        size={300}
+        width={12}
+        fill={(secondsEllapsed * 100) /  600}
+        tintColor="#00E0FF"
+        backgroundColor="#FFF">
+        { () => ( 
+          <Text style={styles.title}>{formatSeconds(secondsEllapsed)}</Text>
+        )}
+        </AnimatedCircularProgress>
 
       <TouchableOpacity style={styles.button} onPress={startTimer}>
         <MaterialIcons name="play-arrow" size={32} color="#FFF" />
