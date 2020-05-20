@@ -10,7 +10,7 @@ import Timer from './pages/Timer';
 function Routes() {
   return (
     <NavigationContainer>
-      <AppStack.Navigator>
+      <AppStack.Navigator screenOptions={{ headerShown: false }}>
         <AppStack.Screen  name="welcome" component={Welcome} />
         <AppStack.Screen  name="Timer" component={Timer} />
       </AppStack.Navigator>
