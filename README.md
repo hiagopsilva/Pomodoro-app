@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> A simple application for more productivity.
+> A simple application for productivity.
 
 ## Install
 
