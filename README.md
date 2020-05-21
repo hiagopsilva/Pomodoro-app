@@ -7,7 +7,7 @@
 ## Install
 
 * Create a local folder on your machine and clone the repository.
-* Then open the command prompt and run the command ```yarn install```.
+* Open the command prompt and run the command ```yarn install```.
 
 ## Usage
 
