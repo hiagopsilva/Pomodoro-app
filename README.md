@@ -15,22 +15,22 @@
 expo start 
 ```
 ## Dependencies 
-  * @react-native-community/masked-view,
-  * @react-navigation/native,
-  * @react-navigation/stack,
-  * expo,
-  * expo-linear-gradient,
-  * react,
-  * react-dom,
-  * react-native,
-  * react-native-circular-progress,
-  * react-native-gesture-handler,
-  * react-native-reanimated,
-  * react-native-safe-area-context,
-  * react-native-screens,
-  * react-native-svg,
-  * react-native-web,
-  * typescript,
+  * @react-native-community/masked-view
+  * @react-navigation/native
+  * @react-navigation/stack
+  * expo
+  * expo-linear-gradient
+  * react
+  * react-dom
+  * react-native
+  * react-native-circular-progress
+  * react-native-gesture-handler
+  * react-native-reanimated
+  * react-native-safe-area-context
+  * react-native-screens
+  * react-native-svg
+  * react-native-web
+  * typescript
   * readme-md-generator
   
 ## Author
