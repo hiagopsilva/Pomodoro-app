@@ -4,6 +4,8 @@
 
 > A simple application for productivity.
 
+<img src="https://gifs.com/gif/pomodoroapp-QnrqWL" alt="demo pomodoro app" />
+
 ## Install
 
 * Create a local folder on your machine and clone the repository.
